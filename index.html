@@ -62,6 +62,39 @@
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 56px;
+  }
+
+  .hero-photo {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 0 6px rgba(201,168,76,0.12);
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  @media (max-width: 640px) {
+    .hero-inner {
+      flex-direction: column;
+      gap: 28px;
+      text-align: center;
+    }
+    .hero-photo {
+      width: 130px;
+      height: 130px;
+    }
+    .contact-row {
+      justify-content: center;
+    }
   }
 
   .hero-label {
@@ -425,6 +458,8 @@
 <!-- ═══ HERO ═══ -->
 <header class="hero">
   <div class="hero-inner">
+    <img src="Professional_headshot_with_navy_suit.png" alt="Ahmad (Adam) Atta" class="hero-photo">
+    <div class="hero-text">
     <p class="hero-label">Professional Resume</p>
     <h1>Ahmad (Adam) Atta, PMP</h1>
     <p class="hero-title">Operations &amp; Commercial Leader &nbsp;·&nbsp; Canadian National Railway</p>
@@ -444,6 +479,7 @@
       <a href="https://linkedin.com/in/ahmad-atta-pmp-49649910a" target="_blank" class="contact-item">
         <span class="contact-dot"></span> LinkedIn Profile
       </a>
+    </div>
     </div>
   </div>
 </header>
